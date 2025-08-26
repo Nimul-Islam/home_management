@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheduler</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <h1 class="logo">Smart Home</h1>
+        <nav>
+            <ul></ul>
+        </nav>
+    </header>
+    
+    <main class="dashboard">
+        <section class="card" id="schedule">
+            <h2>Device Scheduler</h2>
+            <div class="scheduler">
+                <label for="device-select">Select Device:</label>
+                <select id="device-select">
+                    <option value="light">Living Room Light</option>
+                    <option value="fan">Bedroom Fan</option>
+                    <option value="plug">Smart Plug</option>
+                </select>
+                <label for="time-on">Turn On at:</label>
+                <input type="time" id="time-on">
+                <label for="time-off">Turn Off at:</label>
+                <input type="time" id="time-off">
+                <button id="set-schedule-btn">Set Schedule</button>
+            </div>
+            <ul id="schedule-list"></ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

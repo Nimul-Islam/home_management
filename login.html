@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Smart Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <h1 class="logo">Sweet Home</h1>
+        <nav>
+            <ul>
+                <!-- Navigation links will be added dynamically by JavaScript -->
+            </ul>
+        </nav>
+    </header>
+
+    <main class="login-container">
+        <section class="card login-card">
+            <h2>Login</h2>
+            <div class="login-form">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Enter your username">
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password">
+                </div>
+                <button id="login-btn">Login</button>
+                <p id="login-error" class="error-message"></p>
+                <p class="register-link">Don't have an account? <a href="register.html">Register here</a></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

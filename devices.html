@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devices</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <h1 class="logo">Smart Home</h1>
+        <nav>
+            <ul></ul>
+        </nav>
+    </header>
+    
+    <main class="dashboard">
+        <section class="card" id="devices">
+            <h2>Devices Status</h2>
+            <div class="device-list">
+                <div class="device-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <p>Living Room Light</p>
+                    <label class="switch">
+                        <input type="checkbox" data-device="light" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="device-item">
+                    <i class="fas fa-fan"></i>
+                    <p>Bedroom Fan</p>
+                    <label class="switch">
+                        <input type="checkbox" data-device="fan">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="device-item">
+                    <i class="fas fa-plug"></i>
+                    <p>Smart Plug</p>
+                    <label class="switch">
+                        <input type="checkbox" data-device="plug" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
