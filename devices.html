@@ -3,50 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Devices</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Devices Control</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --bg-primary: #1e2029;
+            --bg-secondary: #2c2f3a;
+            --text-primary: #e6e6e6;
+            --text-accent: #ff6b6b;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+        }
+
+        .navbar {
+            background-color: rgba(44, 47, 58, 0.7);
+            backdrop-filter: blur(10px);
+        }
+
+        .text-accent {
+            color: var(--text-accent);
+        }
+
+        .bg-accent {
+            background-color: var(--text-accent);
+        }
+        
+        .hover\:bg-accent-dark:hover {
+            background-color: #f05252;
+        }
+        
+        .card {
+            background-color: var(--bg-secondary);
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+        }
+    </style>
 </head>
-<body>
-    <header class="navbar">
-        <h1 class="logo">Smart Home</h1>
-        <nav>
-            <ul></ul>
-        </nav>
-    </header>
+<body class="bg-[#1C1E26] text-[#E0E2E7] min-h-screen">
     
-    <main class="dashboard">
-        <section class="card" id="devices">
-            <h2>Devices Status</h2>
-            <div class="device-list">
-                <div class="device-item">
-                    <i class="fas fa-lightbulb"></i>
-                    <p>Living Room Light</p>
-                    <label class="switch">
-                        <input type="checkbox" data-device="light" checked>
-                        <span class="slider round"></span>
-                    </label>
+    <!-- Navbar -->
+    <nav class="navbar shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-accent text-xl font-bold uppercase tracking-wider">Smart Home</a>
                 </div>
-                <div class="device-item">
-                    <i class="fas fa-fan"></i>
-                    <p>Bedroom Fan</p>
-                    <label class="switch">
-                        <input type="checkbox" data-device="fan">
-                        <span class="slider round"></span>
-                    </label>
-                </div>
-                <div class="device-item">
-                    <i class="fas fa-plug"></i>
-                    <p>Smart Plug</p>
-                    <label class="switch">
-                        <input type="checkbox" data-device="plug" checked>
-                        <span class="slider round"></span>
-                    </label>
+                <div class="flex items-center space-x-4">
+                    <ul id="nav-menu" class="flex space-x-4">
+                        <!-- Menu items will be injected here by JS -->
+                    </ul>
                 </div>
             </div>
-        </section>
+        </div>
+    </nav>
+    
+    <main class="py-12 px-4 sm:px-6 lg:px-8">
+        <div id="content-container">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card">
+                    <h2 class="text-xl font-semibold border-b border-gray-700 pb-2 mb-4 text-accent">Devices Control</h2>
+                    <ul id="device-list" class="space-y-4"></ul>
+                    <div class="mt-4">
+                        <h3 class="text-lg font-semibold mb-2 text-accent">Connected Devices</h3>
+                        <p id="suggestion-output" class="mt-2 text-sm">Real-time status of your connected devices will be shown here.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
-
-    <script src="script.js"></script>
+    
+    <!-- Custom JS -->
+    <script type="module" src="script.js"></script>
 </body>
 </html>

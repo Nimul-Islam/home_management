@@ -3,27 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes</title>
-    <link rel="stylesheet" href="style.css">
+    <title>My Notes</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header class="navbar">
-        <h1 class="logo">Smart Home</h1>
-        <nav>
-            <ul></ul>
-        </nav>
-    </header>
+<body class="bg-[#1C1E26] text-[#E0E2E7] min-h-screen">
     
-    <main class="dashboard">
-        <section class="card">
-            <h2>Notes</h2>
-            <textarea id="note-input" placeholder="Write a new note..."></textarea>
-            <button id="add-note-btn">Add Note</button>
-            <ul id="note-list"></ul>
-        </section>
+    <!-- Navbar -->
+    <nav class="navbar shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-accent text-xl font-bold uppercase tracking-wider">Smart Home</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <ul id="nav-menu" class="flex space-x-4">
+                        <!-- Menu items will be injected here by JS -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <main class="py-12 px-4 sm:px-6 lg:px-8">
+        <div id="content-container">
+            <div class="flex justify-center items-center">
+                <div class="card w-full max-w-lg">
+                    <h2 class="text-xl font-semibold border-b border-gray-700 pb-2 mb-4 text-accent">My Notes</h2>
+                    <form id="note-form" class="flex space-x-2 mb-4">
+                        <input type="text" id="note-input" placeholder="Add a new note..." class="flex-grow px-3 py-2 rounded-lg bg-[#2b2f3a] border border-[#4a5568] focus:outline-none focus:ring-2 focus:ring-accent">
+                        <button type="submit" class="bg-accent text-[#1f3041] font-bold py-2 px-4 rounded-lg hover:bg-accent-dark">Add</button>
+                    </form>
+                    <ul id="notes-list" class="space-y-2"></ul>
+                </div>
+            </div>
+        </div>
     </main>
-
-    <script src="script.js"></script>
+    
+    <!-- Custom JS -->
+    <script type="module" src="script.js"></script>
 </body>
 </html>
