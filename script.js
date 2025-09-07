@@ -2,14 +2,15 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebas
 import { getFirestore, doc, setDoc, collection, getDocs, onSnapshot, deleteDoc } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore.js";
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-auth.js";
 
-// Firebase Configuration (Replace with your own)
+// Firebase Configuration
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_AUTH_DOMAIN",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_STORAGE_BUCKET",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyDUD8jsgH3sIMrKuI9A___DlYkMwdwy4Rs",
+  authDomain: "home-management-system-6045b.firebaseapp.com",
+  projectId: "home-management-system-6045b",
+  storageBucket: "home-management-system-6045b.firebasestorage.app",
+  messagingSenderId: "802600653999",
+  appId: "1:802600653999:web:86bd29b9943f5be925b05a",
+  measurementId: "G-K24V5BR2H1"
 };
 
 // Initialize Firebase
